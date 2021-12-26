@@ -1,17 +1,110 @@
-/* body {
+body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+
+    /* align-items: center; */
 }
+header{
+    color: crimson;
+    background-color: rgb(11, 92, 184);
+    text-align: center;
+}
+footer{
+    color: darkmagenta;
+    background-color: lightblue;
+    text-align: center;
+}
+.logo-title{
+    
+    position: relative;
+    background-color: rgb(25, 0, 255);
+    color: rgb(9, 240, 228);
+    font-size: 15rem;
+    text-align: center;
+}
+
 .thumbnails-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-height: 25vh;
     overflow-y: auto;
-} */
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    padding-top: 2.5;
+}
 .thumbnails-image {
     width: 20vw;
-    height: 15vw;
+    height: 18vw;
+    display: block;
+}
+.details-title{
+    background-color: cornflowerblue;
+    position: absolute;
+    left: 3vw;
+    bottom: 2vw;
+}
+.details-image{
+    width: 40vw;
+    height: 25vw;
+}
+.details-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: ;
+}
+.thumbnails-title{
+    display: block;
+    text-align: center;
+    background-color: beige;
+    color: rgb(81, 255, 0);
+    font-size:  1.5rem;
+}
+
+.thumbnails-item{
+    margin-top:3vh;
+    margin-left: 3vw;
+    border: 1px solid blue;
+}
+.thumbnails-anchor{
+    text-decoration: none;
+}
+
+body, html{
+    height: 100%;
+}
+
+@media (min-width: 568px) {
+    .thumbnails-anchor{
+        background-size: width 30mm, height 25mm;
+        justify-content: flex-end;
+    }
+
+    .details-image{
+        position: absolute;
+        left: calc(45%);
+        top: 40%;
+        transform: translate(-40%,-40%);
+        size: 23vh;
+        
+    }
+    
+    .thumbnails-list{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        order: -1;
+    }
+    .thumbnails-title{
+        width: 23vw;
+
+    }
+    .thumbnails-item{
+        width: 23vw;
+        border-radius: 12px;
+        border: 5px #ccc solid;
+        box-shadow: 0 0 10px rgb(68, 68, 68);
+    }
 }
